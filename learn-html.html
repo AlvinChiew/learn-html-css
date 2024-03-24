@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="image/favicon.png" type="image/png" />
+    <title>Learn HTML</title>
+  </head>
+  <body>
+    <header>
+      <h1>HEADER</h1>
+      <a href="">Home</a>
+      <a href="">About</a>
+      <a href="">Product</a>
+      <a href="">Contact</a>
+      <hr />
+    </header>
+
+    <main>
+      <h1>Hello World!</h1>
+      <h2>Hello World!</h2>
+      <h3>Hello World!</h3>
+      <h4>Hello World!</h4>
+      <h5>Hello World!</h5>
+      <h6>Hello World!</h6>
+      <hr />
+      <br />
+      <!-- COMMENT -->
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+        veritatis asperiores repellat rem, necessitatibus error facere quasi est
+        expedita, optio sapiente non tempore. Enim optio nesciunt iure id ut
+        quaerat!
+      </p>
+      <pre>
+            Lorem,
+        
+            ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+            consectetur perspiciatis eveniet aliquid impedit temporibus id facere,
+            placeat recusandae? Quam quaerat corrupti vero vitae harum necessitatibus
+            porro nesciunt quis accusamus.
+        </pre
+      >
+      <p>
+        <b>bold</b>
+        <i>italic</i>
+        <u>underline</u>
+        <del>deleted</del>
+        <big>big</big>
+        <small>small</small>
+        <sub>subscript</sub>
+        <sup>superscript</sup>
+        <tt>monospaced</tt>
+        <mark style="background-color: greenyellow">highlight</mark>
+      </p>
+      <p>This is a <span style="background-color: tomato">span</span> tag</p>
+      <div style="background-color: cyan"><p>This is a div tag</p></div>
+      <ul>
+        <li>A</li>
+        <li>C</li>
+        <ul>
+          <li>cat</li>
+          <li>cafe</li>
+          <li>coffee</li>
+        </ul>
+        <li>E</li>
+      </ul>
+      <ol>
+        <li>A</li>
+        <li>C</li>
+        <ol>
+          <li>cat</li>
+          <li>cafe</li>
+          <li>coffee</li>
+        </ol>
+        <li>E</li>
+      </ol>
+      <dl style="background-color: lightblue">
+        <dt>A</dt>
+        <dt>C</dt>
+        <dd>cat</dd>
+        <dd>cafe</dd>
+        <dd>coffee</dd>
+        <dt>E</dt>
+      </dl>
+      <table border="1">
+        <tr align="center">
+          <th width="100">Name</th>
+          <th width="100">Age</th>
+        </tr>
+        <tr align="right">
+          <td>Alvin</td>
+          <td>29</td>
+        </tr>
+        <tr align="right">
+          <td>Kelvin</td>
+          <td>35</td>
+        </tr>
+      </table>
+      <br />
+      <table border="1" style="background-color: black">
+        <tr align="center" style="background-color: aquamarine">
+          <th width="100">Name</th>
+          <th width="100">Age</th>
+        </tr>
+        <tr align="right" style="background-color: aliceblue">
+          <td>Alvin</td>
+          <td>29</td>
+        </tr>
+        <tr align="right" style="background-color: aliceblue">
+          <td>Kelvin</td>
+          <td>35</td>
+        </tr>
+      </table>
+      <br />
+      <hr />
+      <button onclick="greet()" style="border-radius: 6px">
+        Click to greet
+      </button>
+      <p id="greeting">Greet</p>
+      <script>
+        function greet() {
+          document.getElementById('greeting').innerHTML = 'Hello World!';
+        }
+      </script>
+      <br />
+      <hr />
+      <form action="index.php" method="POST" enctype="multipart/form-data">
+        <label for="username">username:</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="spongebob"
+          minlength="5"
+          maxlength="10"
+          required
+        /><br />
+        <label for="password">password:</label>
+        <input type="password" id="password" /><br />
+        <label for="email">email:</label>
+        <input type="email" id="email" /><br />
+        <label for="contact">contact:</label>
+        <input type="tel" id="contact" pattern="[0-9]{4}-[0-9]{7}" /><br />
+        <label for="birthday">birthday:</label>
+        <input type="date" id="birthday" /><br />
+        <label for="quantity">quantity:</label>
+        <input type="number" id="quantity" min="-1" max="99" /><br />
+        <label for="gender">gender:</label>
+        <label for="male">male:</label>
+        <input type="radio" id="male" name="gender" />
+        <label for="female">female:</label>
+        <input type="radio" id="female" name="gender" /><br />
+        <label for="language">language:</label>
+        <select id="language">
+          <option value="mandarin">Mandarin</option>
+          <option value="malay">Malay</option>
+          <option value="english">English</option>
+        </select>
+        <br />
+        <label for="comment">comment:</label>
+        <textarea id="comment" rows="3" cols="25"></textarea> <br />
+        <label for="upload">upload:</label>
+        <input type="file" id="upload" accept="image/png, image/jpeg" /> <br />
+        <input type="reset" />
+        <input type="submit" />
+      </form>
+      <br />
+      <hr />
+      <!-- target = blank: open url in a new tab / window -->
+      <a href="https://google.com" target="_blank" title="This is a Tooltip"
+        >Google</a
+      >
+      <a href="second-page.html">Seond Page</a>
+      <br />
+      <a href="mailto:contact@alvinchiew.com">Email</a>
+      <hr />
+      <a href="https://en.wikipedia.org/wiki/Kitten">
+        <img src="image/kitten.png" alt="this is a kitten" height="200" /><br />
+      </a>
+      <img src="image/kitten.jpg" alt="this is a kitten" height="200" /><br />
+      <img src="image/puppy.gif" alt="this is a kitten" height="200" /><br />
+      <br />
+      <hr />
+      <h1>Star Wars</h1>
+      <audio controls autoplay muted loop>
+        <source src="audio/Star Wars Main Theme Song.wav" type="audio/wav" />
+        <!-- fallback audio-->
+        <source src="audio/Star Wars Main Theme Song.mp3" type="audio/mp3" />
+      </audio>
+      <h1>Never Gonna Give You Up</h1>
+      <audio controls>
+        <source src="audio/Never Gonna Give You Up.mp3" />
+      </audio>
+      <br />
+      <audio controls>
+        <source src="audio/invalid.mp3" />
+      </audio>
+      <br />
+      <hr />
+      <h1>Wildlife</h1>
+      <video width="500px" controls autoplay muted>
+        <source src="video/wildlife.mov" />
+        <!-- fallback video-->
+        <source src="video/wildlife.mp4" type="video/mp4" />
+      </video>
+      <video width="500px" controls>
+        <source src="video/invalid.mp4" />
+      </video>
+    </main>
+
+    <footer>
+      <hr />
+      author: Alvin Chiew <br />
+      &copy; 2024 copyright reserved <br />
+      <small
+        ><a href="mailto:contact@alvinchiew.com"
+          >contact@alvinchiew.com</a
+        ></small
+      >
+    </footer>
+  </body>
+</html>
