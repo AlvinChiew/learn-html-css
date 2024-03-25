@@ -1,0 +1,201 @@
+@font-face {
+  src: url(font/TheChairman-Regular.otf);
+  font-family: TheChairman;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: Roboto, verdana, arial, helvetica, sans-serif;
+  border-style: dashed;
+  border-width: 4px;
+  border-radius: 10px;
+  text-shadow: 4px 4px 3px hsl(0, 100%, 61%), -4px -4px 3px hsl(180, 100%, 61%);
+}
+p {
+  font-family: 'Open Sans', 'lucida console', 'courier new';
+  font-size: 12px;
+  color: cyan;
+}
+
+#p2_id {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-style: italic;
+  color: yellow;
+  margin: auto;
+  padding: 10px;
+  border-top: dotted;
+  border-bottom: dotted;
+  width: 500px;
+  height: 120px;
+  box-shadow: 10px 10px 10px hsl(0, 100%, 61%),
+    -10px -10px 10px hsl(180, 100%, 61%);
+}
+
+.p3_class {
+  color: magenta;
+  border-style: solid;
+  margin: 10px;
+  text-align: center;
+}
+
+.p4_class {
+  color: yellow;
+  width: 20%;
+  height: 120px;
+  border-style: solid;
+  margin-right: auto;
+  margin-left: 10px;
+  overflow-y: auto;
+}
+
+.signature {
+  font-family: TheChairman;
+  font-size: 1.2em;
+}
+
+.img_kitten {
+  float: left;
+  margin: 20px;
+}
+
+.kitten_box {
+  width: 100vw;
+  border: 3px solid;
+  color: white;
+  margin: 10px;
+  display: flow-root;
+}
+
+.div_display {
+  background-color: tomato;
+  display: none;
+}
+
+.span_display {
+  background-color: lightgreen;
+  visibility: hidden;
+}
+
+.box_relative {
+  background-color: aquamarine;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 15px;
+  left: 150px;
+  z-index: -1;
+}
+.box_absolute {
+  background-color: yellow;
+  position: absolute;
+  top: 12px;
+}
+
+.box_sticky {
+  background-color: pink;
+  width: 100px;
+  height: 100px;
+  position: sticky;
+  bottom: 50px;
+  margin-left: auto;
+  text-align: center;
+}
+
+.box_fixed {
+  background-color: salmon;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  text-align: center;
+}
+
+.div_background_image {
+  display: flex;
+  background-color: grey;
+  background-image: url(image/kitten.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  border: 2px solid white;
+}
+
+/* descendant */
+#container p {
+  background-color: darkgreen;
+}
+
+/* child */
+#container > p {
+  background-color: darkred;
+}
+
+/* general sibling */
+#container ~ p {
+  background-color: darkgoldenrod;
+}
+
+/* adjacent sibling */
+#container + p {
+  background-color: darkmagenta;
+}
+
+a:link {
+  color: aquamarine;
+}
+
+a:hover {
+  color: lightsalmon;
+}
+
+a:visited {
+  color: lightgray;
+}
+
+.pseudo_class li:nth-child(even) {
+  background-color: yellow;
+}
+
+.pseudo_class li:nth-child(3) {
+  background-color: blue;
+}
+
+.pseudo_class li:nth-child(3n + 1) {
+  background-color: red;
+}
+
+.pseudo_class li:not(hover) {
+  background-color: palegreen;
+}
+
+.pseudo_class li:hover {
+  background-color: aliceblue;
+}
+
+.pseudo_element p::first-letter {
+  font-size: 3em;
+  font-style: italic;
+}
+
+.pseudo_element p::selection {
+  color: black;
+  background-color: white;
+}
+
+.pseudo_element ul li {
+  color: white;
+}
+.pseudo_element ul li::marker {
+  content: '>';
+}
