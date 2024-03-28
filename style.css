@@ -155,12 +155,16 @@ a:link {
   color: aquamarine;
 }
 
-a:hover {
+a:hover:not(visited) {
   color: lightsalmon;
 }
 
 a:visited {
   color: lightgray;
+}
+
+a:hover:visited {
+  color: blue;
 }
 
 .pseudo_class li:nth-child(even) {
