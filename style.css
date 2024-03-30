@@ -204,15 +204,19 @@ a:hover:visited {
   content: '>';
 }
 
-.flex_container {
+.container {
+  margin-top: 2em;
+  border: 5px solid white;
+  color: white;
+}
+
+.flex {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  border: 5px solid white;
   min-height: 200px;
-  color: white;
   overflow: auto;
 }
 
@@ -245,11 +249,9 @@ a:hover:visited {
   z-index: 1;
 }
 
-.grid_container {
-  border: 5px solid white;
-  min-height: 600px;
+.grid {
   display: grid;
-  margin-top: 1em;
+  min-height: 600px;
   grid-template-columns: 100px 100px minmax(100px, 2fr) 1fr;
   grid-template-rows: repeat(4, 100px);
   grid-auto-flow: column;
@@ -261,25 +263,23 @@ a:hover:visited {
   align-content: center;
 }
 
-.resized_1 {
+.reassigned_1 {
   grid-row: span 2;
   grid-column: span 2;
 }
 
-.resized_2 {
+.reassigned_2 {
   /* start / end */
   grid-row: 1 / 3;
   grid-column: 1 / 3;
 }
 
-.resized_3 {
+.reassigned_3 {
   /* row_start / col_start / row_end / col_end */
   grid-area: 3 / 1 / -1 / 3;
 }
 
-.grid_container_page {
-  margin-top: 10px;
-  border: 5px solid white;
+.grid_page {
   display: grid;
   grid-template-rows: 100px 300px 100px;
   grid-template-columns: 1fr 3fr;
@@ -289,27 +289,119 @@ a:hover:visited {
     'footer footer';
 }
 
-.grid_container_2 #box1 {
+.grid_page #box1 {
   grid-area: header;
   align-self: end;
 }
 
-.grid_container_2 #box2 {
+.grid_page #box2 {
   grid-area: main;
 }
 
-.grid_container_2 #box3 {
+.grid_page #box3 {
   grid-area: aside;
 }
 
-.grid_container_2 #box4 {
+.grid_page #box4 {
   grid-area: footer;
 }
 
-.grid_container_responsive {
-  margin-top: 10px;
-  border: 5px solid white;
+.grid_responsive {
   display: grid;
   grid-template-rows: repeat(4, 100px);
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.transform {
+  display: grid;
+}
+
+.transform div {
+  width: 50px;
+  height: 50px;
+  border: 5px solid grey;
+  text-align: center;
+  font-size: 2em;
+
+  transform: scale(0.5);
+}
+
+.transform #box1 {
+  transform: translate(100%, 20px) skewX(30deg) rotateZ(45deg);
+}
+
+.animation #box1 {
+  animation-name: rotateTwoSides;
+  animation-duration: 8s;
+  animation-direction: reverse;
+  animation-play-state: running;
+  animation-timing-function: steps(5);
+}
+
+.animation #box2 {
+  animation-name: fadeOut;
+  animation-duration: 8s;
+}
+
+.animation #box3:hover {
+  animation-name: colorChange;
+  animation-duration: 10s;
+  animation-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+
+.animation #box4:hover {
+  animation-name: glow;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes slideRight {
+  to {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotateTwoSides {
+  75% {
+    transform: rotateZ(-225deg);
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: orange;
+  }
+  30% {
+    background-color: green;
+  }
+  60% {
+    background-color: indigo;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes glow {
+  50% {
+    box-shadow: 0px 0px 50px yellow;
+  }
 }
